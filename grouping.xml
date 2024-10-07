@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Suite">
+    <groups>
+        <run>
+            <include name="Master"/>
+            <!--  <exclude name="Sanity"/>  -->
+            <!--  <exclude name="Regression"/>   -->
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"></listener>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+        <listener class-name="org.testng.reporters.FailedReporter"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="E:/AutomationMaven/OpenCartV121/src/test/java/testCases">
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+           <class name="testCases.TC001_AccountRegisterationTest"/>
+           <class name="testCases.TC002_LoginTest"></class>
+            <!--  <class name="testCases.TC003_LoginDDT"></class> -->
+         </classes>
+     </test>
+ </suite>
+
+
+
